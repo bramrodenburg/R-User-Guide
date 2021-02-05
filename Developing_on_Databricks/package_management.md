@@ -5,8 +5,8 @@ Databricks supports a variety of options for installing and managing new, old, a
 **Contents**
 
 * [Installing Packages](#installing-packages)
-  * [Notebook Scope](#notebook-scope)
-  * [Cluster Scope](#cluster-scope)
+  * [From a Notebook](#from-a-notebook)
+  * [From the Clusters UI](#from-the-clusters-ui)
   * [Older Package Versions](#older-package-versions)
   * [Custom Packages](#custom-packages)
 * [Faster Package Loads](#faster-package-loads)
@@ -14,15 +14,15 @@ Databricks supports a variety of options for installing and managing new, old, a
 
 ## Installing Packages
 
-### Notebook Scope
+### From a Notebook
 
 At the most basic level, you can install R packages in your notebooks and RStudio scripts using the familiar `install.packages()` function. 
 
 <img src="https://github.com/marygracemoesta/R-User-Guide/blob/master/Developing_on_Databricks/images/installpackages.png?raw=true">
 
-This will install the package on the driver node **only**.  
+This will install the package on the driver node **only**. Note that the package will be installed on a cluster level when you run this command from an R notebook. This behaviour is different from when you run it from RStudio Server on Databricks. Furthermore, if the cluster gets restarted, you will have to run the command again to install it. If you don't want this, take a look at the next section.
 
-### Cluster Scope
+### From the Clusters UI
 
 Under the 'Libraries' tab in the Clusters UI you can attach packages to the cluster.  
 
